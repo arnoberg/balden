@@ -20,24 +20,19 @@
 
 
  // ** Heroku ClearDB settings - from Heroku Environment ** //
-//$db = parse_url($_ENV["mysql://b9556c16e80416:969c6f2e@eu-cdbr-west-02.cleardb.net/heroku_98ed48a7328ff1f?reconnect=true"]);
+$db = parse_url($_ENV["CLEARDB_RED_URL"]);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'heroku_98ed48a7328ff1f');
-
+define('DB_NAME', trim($db["path"],"/"));
 /** MySQL database username */
-define('DB_USER', 'b9556c16e80416');
-
+define('DB_USER', $db["user"]);
 /** MySQL database password */
-define('DB_PASSWORD', '969c6f2e');
-
+define('DB_PASSWORD', $db["pass"]);
 /** MySQL hostname */
-define('DB_HOST', 'heu-cdbr-west-02.cleardb.netost');
-
+define('DB_HOST', $db["host"]);
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
-
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
