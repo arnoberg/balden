@@ -18,9 +18,13 @@
  * @package WordPress
  */
 
+
+ // ** Heroku ClearDB settings - from Heroku Environment ** //
+$db = parse_url($_ENV["CLEARDB_DATABASE_URL"]);
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
+define('DB_NAME', 'heroku_98ed48a7328ff1f');
 
 /** MySQL database username */
 define('DB_USER', 'b9556c16e80416');
