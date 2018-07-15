@@ -20,7 +20,7 @@
 
 
  // ** Heroku ClearDB settings - from Heroku Environment ** //
-$db = parse_url($_ENV["mysql://b9556c16e80416:969c6f2e@eu-cdbr-west-02.cleardb.net/heroku_98ed48a7328ff1f?reconnect=true"]);
+//$db = parse_url($_ENV["mysql://b9556c16e80416:969c6f2e@eu-cdbr-west-02.cleardb.net/heroku_98ed48a7328ff1f?reconnect=true"]);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
